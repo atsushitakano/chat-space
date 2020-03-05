@@ -1,8 +1,8 @@
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|email|text|null: false, add_index users,:email,uique:true|
-|name|text|null: false, add_index users,:name,uique:true|
+|email|string|null: false, add_index users,:email,uique:true|
+|name|string|null: false, add_index users,:name,uique:true|
 |password|text|null: false, add_index users,:password,uique:true|
 
 ### Association
@@ -23,7 +23,7 @@
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|text|null: false|
+|name|string|null: false|
 
 ### Association
 - has_many :tweets
