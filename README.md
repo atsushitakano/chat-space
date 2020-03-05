@@ -24,7 +24,6 @@
 |Column|Type|Options|
 |------|----|-------|
 |name|text|null: false|
-|user_id|reference|user, foreign_key: true|
 
 ### Association
 - has_many :tweets
@@ -35,8 +34,9 @@
 |Column|Type|Options|
 |------|----|-------|
 |image|string|
-|text|text|null: false|
+|text|text|
 |user_id|reference|user, foreign_key: true|
+|group_id|integer|group, foreign_key: true|
 
 ### Association
 - belongs_to :user
