@@ -1,7 +1,9 @@
+@import "./config/variable";
+
 .side-bar {
   height: 100vh;
   width: 300px;
-  color:#ffffff;
+  color:$mainTextColorSide; 
   &__user-name{
     height: 100px;
     width: 300px;
@@ -26,7 +28,7 @@
 
         .contents__btn{
           text-decoration: none;
-          color: #ffffff;
+          color:$mainTextColorSide; 
          .contents__btn-cog{
            margin-left: 5px;
           }
@@ -45,11 +47,11 @@
       &__group{
         font-size: 15px;
         margin-bottom: 5px;
-        color: #ffffff;
+        color:$mainTextColorSide; 
       }
       &__latest-message{
         font-size: 11px;
-        color: #ffffff;
+        color:$mainTextColorSide; 
         margin-bottom: 40px;
       }
     }

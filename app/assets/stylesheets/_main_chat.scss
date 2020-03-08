@@ -1,9 +1,14 @@
+@import "./config/variable";
+
+.wrapper{
+  display: flex;
+}
 .main-chat {
-  background-color: #ffffff;
+  background-color: $mainBackGroundColor;
   height: 100vh;
   width: calc(100vw - 300px);
   .group-info{
-    background-color: #ffffff;
+    background-color: $mainBackGroundColor;
     height: 100px;
     padding: 0 40px;
     border-bottom: #eeeeee;
@@ -12,10 +17,10 @@
     
     .main-header{
       font-size: 20px;
-      color: #333333;
+      color: $mainTextColorMain;
       margin: 35px 0px 0px 0px;
       &__group-name{
-        color: #999999;
+        color: $subTextColorMain;
         font-size: 12px;
         margin: 15px 0 0 0;
       }
@@ -40,11 +45,11 @@
      .post-messages{
        display: flex;
        &__group-name{
-         color: #333333;
+         color: $mainTextColorMain;
          font-size: 16px;
        }
        &__post-date{
-         color:#999999;
+         color: $subTextColorMain;
          font-size: 12px;
          margin-left: 10px;
        }
