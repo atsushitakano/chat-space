@@ -1,11 +1,12 @@
 .side-bar
   .side-bar__user-name
     .side-bar__user-name__top-items
-      .side-bar__user-name__top-items__name HARUTO
+      .side-bar__user-name__top-items__name 
+        = current_user.name
       .side-bar__user-name__top-items__icons
         = link_to "#", class: "contents__btn contents__btn-edit" do
           = icon('fas','edit',  class: "contents__btn-icon")
-        =link_to "#",class: "contents__btn contents__btn-cog" do
+        =link_to edit_user_path(current_user),class: "contents__btn contents__btn-cog" do
           =icon('fa','cog', class: "contents__btn-cog")
   .side-bar__group-list
     =link_to "#", class: "list-box" do
