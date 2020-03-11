@@ -1,56 +1,21 @@
 .main-chat
- .group-info
-  .main-header
-   ワンワンパニック 
-   .main-header__group-name
-    member :: kimie,haruto
-  = link_to "Edit", "#" ,class: "edit-btn"
- .message-list
-  .posts
-   .post-messages
-    .post-messages__group-name
-     team
-    .post-messages__post-date
-     2020,03,06
-   .message-text
-    おはよう
-  .posts
-   .post-messages
-    .post-messages__group-name
-     team
-    .post-messages__post-date
-     2020,03,06
-   .message-text
-    おはよう
-  .posts
-   .post-messages
-    .post-messages__group-name
-     team
-    .post-messages__post-date
-     2020,03,06
-   .message-text
-    おはよう
-  .posts
-   .post-messages
-    .post-messages__group-name
-     team
-    .post-messages__post-date
-     2020,03,06
-   .message-text
-    おはよう
-  .posts
-   .post-messages
-    .post-messages__group-name
-     team
-    .post-messages__post-date
-     2020,03,06
-   .message-text
-    おはよう
- .message-form
-  %form.new_message
-   .input-box
-    %input{type:"text",class:"input-box__text",placeholder:"type a message"}
-    %label{class:"input-box__image"}
-     = icon('fas','image')
-     %input{type:"file",class:"input-box__image__file"}
-   %input{type:"submit",class:"submit-btn"}
+  .group-info
+    .main-header
+      .main-header__left
+        = @group.name
+      .main-header__group-name
+        Menber :
+        - @group.users.each do |user|
+          = user.name
+    = link_to "Edit", edit_group_path(@group) ,class: "edit-btn"
+  .message-list
+    = render @messages
+  .form
+    = form_for [@group, @message] do |f|
+      .input-box
+      = f.text_field :content, class: 'input-box__message', placeholder: 'type a message'  
+      .form-mask
+        = f.label :image, class: 'form-mask__image' do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'input-submit'
