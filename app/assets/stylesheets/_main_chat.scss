@@ -42,6 +42,7 @@
     background-color: #fafafa;
     height: calc(100vh - 190px);
     padding: 40px;
+    overflow: scroll;
     .posts{
       padding-bottom: 40px;
      .post-messages{
@@ -69,6 +70,7 @@
     background-color: #ddd;
     .new_message{
       display: flex;
+      position: relative;
       .input-box{
         &__message{
           height: 50px;
@@ -76,13 +78,12 @@
           padding: 0 40px 0 10px;
           color: #434a54;
           border-style: none;
-          position: relative;
         }
       }  
       .form-mask{
         position: absolute;
-        bottom: 30px;
-        right: 170px;
+        bottom: 14px;
+        right: 140px;
         font-size: 1.3rem;
         cursor: pointer;
           .hidden{

@@ -7,14 +7,7 @@
         member :: kimie,haruto
     = link_to "Edit", "#" ,class: "edit-btn"
   .message-list
-    .posts
-      .post-messages
-        .post-messages__group-name
-          team
-        .post-messages__post-date
-          2020,03,06
-      .message-text
-        おはよう
+    = render @messages
   .form
     = form_for [@group, @message] do |f|
       .input-box
