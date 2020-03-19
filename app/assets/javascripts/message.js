@@ -9,7 +9,7 @@ $(function(){
                       ${message.user_name}
                       </div>
                       <div class="post-messages__post-date">
-                      ${message.create_at}
+                      ${message.created_at}
                       </div>
                     </div>
                     <div class="message-text">
@@ -27,7 +27,7 @@ $(function(){
                       ${message.user_name}
                       </div>
                       <div class="post-messages__post-date">
-                      ${message.create_at}
+                      ${message.created_at}
                       </div>
                     </div>
                     <div class="message-text">
@@ -44,7 +44,7 @@ $(function(){
                       ${message.user_name}
                       </div>
                       <div class="post-messages__post-date">
-                      ${message.create_at}
+                      ${message.created_at}
                       </div>
                     </div>
                     <div class="message-text">
